@@ -13,14 +13,14 @@
   </div>
   <div class="field">
     <div class="control">
-     <span class='has-text-danger'>{{errorText}}</span>
+     <span class='has-text-danger' id="errorText">{{errorText}}</span>
     </div>
   </div>
   <div class="field">
-    <div class="control">
+    <div class="control" id='forgot'>
      <a routerLink="/forgot" >Forgot password?</a>
     </div>
   </div>
-  <a class="button is-primary" (click)="loginAction()">Login</a>
+  <a class="button is-primary" (click)="loginAction()" id='login'>Login</a>
 
 </div>

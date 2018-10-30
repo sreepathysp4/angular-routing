@@ -8,17 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  showMenuStatus = false;
+  constructor(public authService: AuthService, public router: Router) {}
 
-  constructor(public authService: AuthService, public router: Router) { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  showMenu() {
+    this.showMenuStatus = true;
   }
 
-  logoutAction(){
-    if(this.authService.logout())
-    {
+  logoutAction() {
+    if (this.authService.logout()) {
       this.router.navigate(['login']);
     }
   }
-
 }
