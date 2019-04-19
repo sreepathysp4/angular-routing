@@ -1,15 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SettingsComponent } from './settings/settings.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProductsComponent } from './products/products.component';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { UserComponent } from './user/user.component';
+import { ComponentsModule } from './../components/components.module';
+import { HomeComponent } from './home.component';
 
 @NgModule({
-  imports: [
-    CommonModule, RouterModule
-  ],
-  declarations: [SettingsComponent, DashboardComponent, ProductsComponent, UserComponent]
+  imports: [CommonModule, RouterModule, ComponentsModule, ComponentsModule],
+  declarations: [HomeComponent],
+  exports: [HomeComponent]
 })
-export class HomeModule { }
+export class HomeModule {}
