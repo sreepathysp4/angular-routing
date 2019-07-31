@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "e2e": "protractor config/protractor.e2e.conf.js"
+    "webdriver": "webdriver-manager update && webdriver-manager start",
+    "e2e": "npm run webdriver && protractor config/protractor.e2e.conf.js"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "protractor-multiple-cucumber-html-reporter-plugin": "1.8.1",
     "request": "2.88.0",
     "request-promise": "^4.2.4",
+    "selenium-webdriver": "^4.0.0-alpha.4",
     "ts-node": "^8.3.0",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3",
